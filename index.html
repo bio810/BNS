@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>布麗昂美甲沙龍 BRILLANT NAIL SALON | 大安區信義安和日系美甲</title>
+  <meta name="description" content="布麗昂美甲沙龍座落台北大安信義安和，東京MODE学園專攻、歷練東京銀座/南青山沙龍4年、日本JNEC 1級職人親自施作。">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== 全域重設與防禦規則 ===== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* 強制所有 SVG 絕不能超出容器 */
+    svg {
+      max-width: 100%;
+      height: auto;
+      fill: currentColor;
+    }
+
+    :root {
+      --bg-cream: #faf8f5;
+      --bg-white: #ffffff;
+      --bg-soft: #f4eee8;
+      --text-main: #2b2624;
+      --text-muted: #665d57;
+      --champagne-gold: #b38b59;
+      --champagne-light: #f7f1e9;
+      --border-color: #ebdcd0;
+      --line-green: #06c755;
+      --font-serif: 'Cormorant Garamond', "Noto Serif TC", serif;
+      --font-sans: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    @media (min-width: 600px) {
+      html { font-size: 17px; }
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding-bottom: 74px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .content-container {
+      width: 100%;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ===== 頂部 Header ===== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(250, 248, 245, 0.98);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1.25rem;
+    }
+
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-logo-en {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      letter-spacing: 0.15em;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.1;
+    }
+
+    .brand-logo-zh {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      color: var(--champagne-gold);
+      font-weight: 500;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+
+    /* 頂部語言切換膠囊 */
+    .lang-switch-capsule {
+      display: inline-flex;
+      align-items: center;
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 999px;
+      padding: 2px;
+      gap: 2px;
+    }
+
+    .lang-switch-btn {
+      font-size: 0.72rem;
+      padding: 3px 7px;
+      border-radius: 999px;
+      color: var(--text-muted);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .lang-switch-btn.is-active {
+      background-color: var(--champagne-gold);
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    /* 社群小圖示強制限制 */
+    .header-social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px !important;
+      height: 34px !important;
+      min-width: 34px !important;
+      max-width: 34px !important;
+      border-radius: 50%;
+      background: #fff;
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      overflow: hidden;
+    }
+
+    .header-social-link svg {
+      width: 17px !important;
+      height: 17px !important;
+      max-width: 17px !important;
+    }
+
+    /* 漢堡按鈕 */
+    .menu-toggle-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      padding: 0;
+    }
+
+    .menu-toggle-btn span {
+      width: 22px;
+      height: 2px;
+      background-color: var(--text-main);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .menu-toggle-btn.is-active span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .menu-toggle-btn.is-active span:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-toggle-btn.is-active span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* ===== 抽屜選單 Drawer（預設防禦隱藏） ===== */
+    .nav-drawer {
+      position: fixed;
+      top: 61px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 61px);
+      background-color: var(--bg-cream);
+      display: none; /* 預設完全不佔位、不渲染 */
+      flex-direction: column;
+      padding: 1.5rem 1.5rem 2rem;
+      z-index: 999;
+      overflow-y: auto;
+    }
+
+    .nav-drawer.is-open {
+      display: flex; /* 點擊漢堡後才顯現 */
+    }
+
+    .drawer-lang-box {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 0.75rem 0.85rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .drawer-lang-title {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--champagne-gold);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    .drawer-lang-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.4rem;
+    }
+
+    .drawer-lang-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.55rem 0.2rem;
+      font-size: 0.85rem;
+      color: var(--text-main);
+      background: var(--bg-cream);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    .drawer-lang-item.is-active {
+      background-color: var(--champagne-gold);
+      border-color: var(--champagne-gold);
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .nav-links a {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--text-main);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.7rem;
+    }
+
+    .nav-links a span.en {
+      font-family: var(--font-serif);
+      font-size: 0.85rem;
+      color: var(--champagne-gold);
+    }
+
+    .drawer-social-group {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .drawer-social-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: #fff;
+      border: 1px solid var(--border-color);
+      padding: 0.65rem;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+
+    .drawer-social-btn svg {
+      width: 16px !important;
+      height: 16px !important;
+      max-width: 16px !important;
+    }
+
+    .drawer-footer {
+      margin-top: auto;
+      padding-top: 1.5rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    /* ===== 首屏 Hero 區塊 ===== */
+    .hero-section {
+      padding: 1.8rem 1.25rem 1.8rem;
+      text-align: center;
+      background: radial-gradient(circle at 50% 15%, rgba(247, 241, 233, 0.95), transparent 80%);
+    }
+
+    .hero-badge-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--champagne-gold);
+      margin-bottom: 0.45rem;
+      font-weight: 700;
+      border-bottom: 1px solid var(--champagne-gold);
+      padding-bottom: 2px;
+    }
+
+    .hero-title {
+      font-size: 1.85rem;
+      line-height: 1.3;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      color: var(--text-main);
+    }
+
+    .hero-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      line-height: 1.6;
+    }
+
+    .hero-credentials-box {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 0.85rem 0.75rem 0.75rem;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    }
+
+    .hero-cred-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+    }
+
+    @media (min-width: 500px) {
+      .hero-cred-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+      }
+    }
+
+    .hero-cred-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: var(--bg-cream);
+      padding: 0.65rem 0.4rem;
+      border-radius: 8px;
+      border: 1px solid rgba(235, 220, 208, 0.7);
+    }
+
+    .hero-cred-icon {
+      color: var(--champagne-gold);
+      font-size: 0.85rem;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+
+    .hero-cred-text strong {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--text-main);
+      line-height: 1.25;
+      font-weight: 700;
+    }
+
+    .hero-cred-text span {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+      line-height: 1.2;
+    }
+
+    .hero-lang-bar {
+      margin-top: 0.65rem;
+      padding-top: 0.55rem;
+      border-top: 1px dashed var(--border-color);
+      font-size: 0.76rem;
+      color: var(--champagne-gold);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 480px) {
+      .hero-ctas {
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.75rem;
+      }
+      .hero-ctas .btn {
+        flex: 1;
+        padding: 0.75rem 0.75rem;
+      }
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.75rem 1.25rem;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: var(--champagne-gold);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(179, 139, 89, 0.25);
+    }
+
+    .btn-outline {
+      background-color: #fff;
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+    }
+
+    /* ===== 通用區塊標題 ===== */
+    .section-title-wrap {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-en-title {
+      font-family: var(--font-serif);
+      font-size: 0.85rem;
+      color: var(--champagne-gold);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .section-main-title {
+      font-size: 1.4rem;
+      color: var(--text-main);
+      font-weight: 700;
+      margin-top: 0.2rem;
+    }
+
+    /* ===== 一層殘工法 (Fill-in) ===== */
+    .technique-section {
+      padding: 2.2rem 1.25rem;
+      background: var(--bg-white);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .tech-box {
+      background: var(--bg-cream);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.25rem 1.1rem;
+      margin-top: 0.85rem;
+    }
+
+    .tech-box h3 {
+      font-size: 1.15rem;
+      color: var(--champagne-gold);
+      margin-bottom: 0.65rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 700;
+    }
+
+    .tech-box p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 0.9rem;
+      line-height: 1.65;
+    }
+
+    .compare-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+    }
+
+    .compare-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .compare-item.good {
+      color: #235c41;
+    }
+
+    /* ===== 服務項目介紹 ===== */
+    .services-section {
+      padding: 2.2rem 1.25rem;
+      background: var(--bg-soft);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .service-card-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .service-card {
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.15rem;
+      background: #fff;
+    }
+
+    .service-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .service-badge {
+      font-size: 0.74rem;
+      background: var(--champagne-gold);
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .service-title {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .service-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 0.65rem;
+    }
+
+    .service-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .service-tag {
+      font-size: 0.76rem;
+      background: var(--bg-cream);
+      border: 1px solid var(--border-color);
+      padding: 2px 8px;
+      border-radius: 12px;
+      color: var(--text-main);
+    }
+
+    .mens-service-card {
+      background: #232221;
+      color: #faf8f5;
+      border-color: #3b3633;
+    }
+    .mens-service-card .service-title {
+      color: #e5c398;
+    }
+    .mens-service-card .service-desc {
+      color: #b5ada6;
+    }
+    .mens-service-card .service-tag {
+      background: #2e2c2b;
+      border-color: #4a4542;
+      color: #e5c398;
+    }
+
+    .service-inquiry-note {
+      text-align: center;
+      margin-top: 1.25rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px dashed var(--champagne-gold);
+      line-height: 1.55;
+    }
+
+    /* ===== 社群與作品藝廊 ===== */
+    .social-section {
+      padding: 2.2rem 1.25rem;
+      background: var(--bg-white);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .social-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 0.85rem;
+    }
+
+    @media (min-width: 500px) {
+      .social-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .social-card {
+      background: var(--bg-cream);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.35rem 1.1rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .social-card-icon {
+      width: 44px !important;
+      height: 44px !important;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.65rem;
+      overflow: hidden;
+    }
+
+    .social-card-icon.ig {
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      color: #fff;
+    }
+
+    .social-card-icon.fb {
+      background: #1877f2;
+      color: #fff;
+    }
+
+    .social-card-icon svg {
+      width: 22px !important;
+      height: 22px !important;
+      max-width: 22px !important;
+    }
+
+    .social-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+
+    .social-card p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .btn-social-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0.5rem 1.25rem;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      border: 1px solid var(--border-color);
+      background: #fff;
+      color: var(--text-main);
+    }
+
+    /* ===== 預約須知 & LINE QR ===== */
+    .notice-section {
+      padding: 2.2rem 1.25rem;
+      background: var(--bg-soft);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .notice-card {
+      background: #fff;
+      padding: 1.2rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 1.4rem;
+    }
+
+    .notice-card ul {
+      padding-left: 1.2rem;
+      margin-top: 0.4rem;
+    }
+
+    .line-qr-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      max-width: 300px;
+      margin: 0 auto;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+    }
+
+    .qr-image-wrapper {
+      width: 175px;
+      height: 175px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 8px;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qr-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .qr-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-top: 0.85rem;
+    }
+
+    .qr-id-text {
+      font-size: 0.85rem;
+      color: var(--champagne-gold);
+      font-weight: 700;
+      margin-top: 2px;
+      letter-spacing: 0.05em;
+    }
+
+    .qr-tip {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.45rem;
+      line-height: 1.45;
+    }
+
+    .qr-direct-link-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      margin-top: 0.9rem;
+      background-color: var(--line-green);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      transition: background-color 0.2s;
+    }
+
+    /* ===== 門市位置資訊 ===== */
+    .access-section {
+      padding: 2.2rem 1.25rem;
+      background: var(--bg-white);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .access-info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1.3rem 0;
+      font-size: 0.92rem;
+    }
+
+    .access-info-item {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+
+    .access-icon {
+      font-size: 1.1rem;
+      color: var(--champagne-gold);
+      min-width: 22px;
+    }
+
+    /* 頁尾 Footer */
+    .site-footer {
+      text-align: center;
+      padding: 1.8rem 1.25rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-color);
+      background: var(--bg-cream);
+    }
+
+    .footer-social-links {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-social-links a {
+      color: var(--text-main);
+      font-size: 0.82rem;
+      border: 1px solid var(--border-color);
+      padding: 5px 14px;
+      border-radius: 20px;
+      background: #fff;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .footer-social-links svg {
+      width: 14px !important;
+      height: 14px !important;
+      max-width: 14px !important;
+    }
+
+    .footer-lang-list {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      font-size: 0.78rem;
+    }
+
+    .footer-lang-list a {
+      color: var(--text-muted);
+      text-decoration: underline;
+    }
+
+    /* ===== 手機版常駐預約條 ===== */
+    .mobile-sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 64px;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(8px);
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+      z-index: 1001;
+      gap: 0.75rem;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.05);
+    }
+
+    .sticky-btn-call {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+      height: 44px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+
+    .sticky-btn-line {
+      flex: 1.8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--line-green);
+      color: #fff;
+      height: 44px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      box-shadow: 0 4px 10px rgba(6, 199, 85, 0.25);
+    }
+
+    @media (min-width: 768px) {
+      body {
+        padding-bottom: 0;
+      }
+      .mobile-sticky-bar {
+        display: none;
+      }
+      .site-header {
+        padding: 1rem 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. 頂部導覽列 Header -->
+  <header class="site-header">
+    <a href="index.html" class="brand-logo">
+      <span class="brand-logo-en">BRILLANT</span>
+      <span class="brand-logo-zh">布麗昂美甲沙龍</span>
+    </a>
+
+    <div class="header-actions">
+      <!-- 語言切換膠囊 -->
+      <div class="lang-switch-capsule" aria-label="切換語系">
+        <a href="index.html" class="lang-switch-btn is-active">中</a>
+        <a href="index-ja.html" class="lang-switch-btn">日</a>
+        <a href="index-en.html" class="lang-switch-btn">EN</a>
+      </div>
+
+      <!-- IG 圖示 (鎖死 17x17 像素) -->
+      <a href="https://www.instagram.com/brillant_nail_salon/" target="_blank" class="header-social-link" aria-label="Instagram">
+        <svg width="17" height="17" viewBox="0 0 24 24" style="width:17px!important;height:17px!important;max-width:17px!important;display:block;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+
+      <!-- FB 圖示 (鎖死 17x17 像素) -->
+      <a href="https://www.facebook.com/share/1LEF7n9bh6/" target="_blank" class="header-social-link" aria-label="Facebook">
+        <svg width="17" height="17" viewBox="0 0 24 24" style="width:17px!important;height:17px!important;max-width:17px!important;display:block;"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+
+      <button class="menu-toggle-btn" id="menuToggleBtn" aria-label="切換選單">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 2. 抽屜選單 Drawer -->
+  <nav class="nav-drawer" id="navDrawer">
+    <div class="drawer-lang-box">
+      <span class="drawer-lang-title">🌐 LANGUAGE / 語言切換</span>
+      <div class="drawer-lang-grid">
+        <a href="index.html" class="drawer-lang-item is-active">繁體中文</a>
+        <a href="index-ja.html" class="drawer-lang-item">日本語</a>
+        <a href="index-en.html" class="drawer-lang-item">English</a>
+      </div>
+    </div>
+
+    <ul class="nav-links">
+      <li>
+        <a href="#hero" class="nav-item">
+          <span>職人資歷與認證</span>
+          <span class="en">CREDENTIALS</span>
+        </a>
+      </li>
+      <li>
+        <a href="#fillin" class="nav-item">
+          <span>日式一層殘護甲工法</span>
+          <span class="en">FILL-IN TECH</span>
+        </a>
+      </li>
+      <li>
+        <a href="#services" class="nav-item">
+          <span>經典服務與沙龍項目</span>
+          <span class="en">SERVICES</span>
+        </a>
+      </li>
+      <li>
+        <a href="#social" class="nav-item">
+          <span>最新作品與社群專頁</span>
+          <span class="en">IG & FB GALLERY</span>
+        </a>
+      </li>
+      <li>
+        <a href="#notice" class="nav-item">
+          <span>預約須知與 LINE 官方</span>
+          <span class="en">RESERVATION</span>
+        </a>
+      </li>
+      <li>
+        <a href="#access" class="nav-item">
+          <span>交通指引與沙龍資訊</span>
+          <span class="en">ACCESS</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="drawer-social-group">
+      <a href="https://www.instagram.com/brillant_nail_salon/" target="_blank" class="drawer-social-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" style="width:16px!important;height:16px!important;max-width:16px!important;display:block;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Instagram
+      </a>
+      <a href="https://www.facebook.com/share/1LEF7n9bh6/" target="_blank" class="drawer-social-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" style="width:16px!important;height:16px!important;max-width:16px!important;display:block;"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Facebook
+      </a>
+    </div>
+
+    <div class="drawer-footer">
+      <p style="margin-bottom: 0.35rem; color: var(--champagne-gold); font-weight: 700; font-size: 0.95rem;">BRILLANT NAIL SALON</p>
+      <p>台北市大安區信義路四段265巷23號1樓</p>
+      <p>官方 LINE ID：@105qoxyb</p>
+      <p>預約專線：0936-263-723</p>
+    </div>
+  </nav>
+
+  <main>
+    <!-- 3. 首屏 Hero 區塊 -->
+    <section class="hero-section" id="hero">
+      <div class="content-container">
+        <span class="hero-badge-tag">Tokyo Ginza Standard</span>
+        <h1 class="hero-title">正統日系職人工藝<br>極致健康護甲美學</h1>
+        <p class="hero-desc">
+          堅持日式一層殘（Fill-in）不傷真甲技術<br>
+          為信義大安帶來銀座一線沙龍的極致細節
+        </p>
+
+        <!-- 資歷信任徽章盒 -->
+        <div class="hero-credentials-box">
+          <div class="hero-cred-grid">
+            <div class="hero-cred-item">
+              <span class="hero-cred-icon">✦</span>
+              <div class="hero-cred-text">
+                <strong>日本 JNEC 1 級</strong>
+                <span>日系實技最高認證</span>
+              </div>
+            </div>
+            <div class="hero-cred-item">
+              <span class="hero-cred-icon">✦</span>
+              <div class="hero-cred-text">
+                <strong>東京沙龍 4 年</strong>
+                <span>銀座・表參道・南青山</span>
+              </div>
+            </div>
+            <div class="hero-cred-item">
+              <span class="hero-cred-icon">✦</span>
+              <div class="hero-cred-text">
+                <strong>東京 MODE 学園</strong>
+                <span>美甲彩妝專攻 卒業</span>
+              </div>
+            </div>
+            <div class="hero-cred-item">
+              <span class="hero-cred-icon">✦</span>
+              <div class="hero-cred-text">
+                <strong>JNA 衛生管理士</strong>
+                <span>醫療級滅菌規範</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-lang-bar">
+            日本語対応可 ｜ English Friendly ｜ 國台語皆可
+          </div>
+        </div>
+
+        <!-- 預約按鈕 -->
+        <div class="hero-ctas">
+          <a href="https://lin.ee/uQ07Rjz" target="_blank" class="btn btn-primary">
+            LINE 預約諮詢（@105qoxyb）
+          </a>
+          <a href="tel:0936263723" class="btn btn-outline">
+            致電詢問（0936-263-723）
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 核心工法：日式一層殘 Fill-in -->
+    <section class="technique-section" id="fillin">
+      <div class="content-container">
+        <div class="section-title-wrap">
+          <span class="section-en-title">Healthy Nails Technique</span>
+          <h2 class="section-main-title">日式一層殘護甲</h2>
+        </div>
+
+        <div class="tech-box">
+          <h3>✦ 什麼是一層殘（Fill-in / フィルイン）？</h3>
+          <p>
+            揮別傳統「反覆包卸甲水、全甲面重複拋磨」的傷害。日式一層殘僅精密修磨掉表層色膠，完整保留最親和真甲的原生底膠，守護甲面健康厚度。
+          </p>
+          <ul class="compare-list">
+            <li class="compare-item good">✓ <strong>拒絕過度磨甲</strong>：避免指甲日漸變薄、泛紅與敏感脆裂</li>
+            <li class="compare-item good">✓ <strong>免除丙酮浸泡</strong>：減少化學卸甲溶劑對指緣甘皮的乾燥刺激</li>
+            <li class="compare-item good">✓ <strong>速度精緻兼備</strong>：承襲日本一線沙龍高效率與極致細節</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. 服務項目介紹 -->
+    <section class="services-section" id="services">
+      <div class="content-container">
+        <div class="section-title-wrap">
+          <span class="section-en-title">Salon Services</span>
+          <h2 class="section-main-title">服務項目介紹</h2>
+        </div>
+
+        <div class="service-card-list">
+          <div class="service-card">
+            <div class="service-card-header">
+              <span class="service-badge">養護</span>
+              <h3 class="service-title">日式極致甘皮精修・深層手足養護</h3>
+            </div>
+            <p class="service-desc">
+              依照個人原生甲型細緻修飾對稱弧度，溫和軟化並修磨指緣乾裂甘皮與硬繭，搭配日本進口深層保濕敷膜，讓雙手透出柔潤健康光澤。
+            </p>
+            <div class="service-tags">
+              <span class="service-tag">甲型平衡矯正</span>
+              <span class="service-tag">溫和甘皮精修</span>
+              <span class="service-tag">深層保濕敷膜</span>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card-header">
+              <span class="service-badge">凝膠</span>
+              <h3 class="service-title">日式一層殘凝膠美甲・職人原創設計</h3>
+            </div>
+            <p class="service-desc">
+              全程使用合格低敏日本色膠，結合高難度一層殘工法保護真甲。包含日系裸透單色、細膩暈染、晶石貓眼及高階客製化手繪彩繪。
+            </p>
+            <div class="service-tags">
+              <span class="service-tag">一層殘留底膠技術</span>
+              <span class="service-tag">C弧加固建構</span>
+              <span class="service-tag">日系通透暈染</span>
+            </div>
+          </div>
+
+          <div class="service-card mens-service-card">
+            <div class="service-card-header">
+              <span class="service-badge" style="background: #e5c398; color: #232221;">男士</span>
+              <h3 class="service-title">男士商務指甲整護（Gentlemen Care）</h3>
+            </div>
+            <p class="service-desc">
+              專為商務人士與男士打造。徹底修除倒刺、平整指緣甘皮，並施以自然無光澤的霧面硬甲護理，呈現俐落、專業、乾淨的商務儀容。
+            </p>
+            <div class="service-tags">
+              <span class="service-tag">商務儀容首選</span>
+              <span class="service-tag">倒刺與硬角質清理</span>
+              <span class="service-tag">低調霧面養護</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-inquiry-note">
+          <p><strong>✦ 關於服務報價與預約諮詢</strong></p>
+          <p style="margin-top: 4px; font-size: 0.82rem;">
+            因每位貴賓指甲健康狀態、長度及設計款式工法皆不相同，完整價目及客製化造型報價，歡迎直接透過 <strong>官方 LINE</strong> 或 <strong>Instagram 私訊</strong> 提供款式照片諮詢。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. 社群與作品藝廊 -->
+    <section class="social-section" id="social">
+      <div class="content-container">
+        <div class="section-title-wrap">
+          <span class="section-en-title">Follow Us</span>
+          <h2 class="section-main-title">社群專頁與最新作品</h2>
+        </div>
+
+        <div class="social-cards-grid">
+          <div class="social-card">
+            <div class="social-card-icon ig">
+              <svg width="22" height="22" viewBox="0 0 24 24" style="width:22px!important;height:22px!important;max-width:22px!important;display:block;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </div>
+            <h3>Instagram 作品集</h3>
+            <p>每日更新施作實拍近照、細部光澤展示，限動同步發布「本週臨時釋出空檔」。</p>
+            <a href="https://www.instagram.com/brillant_nail_salon/" target="_blank" class="btn-social-action">
+              追蹤 @brillant_nail_salon
+            </a>
+          </div>
+
+          <div class="social-card">
+            <div class="social-card-icon fb">
+              <svg width="22" height="22" viewBox="0 0 24 24" style="width:22px!important;height:22px!important;max-width:22px!important;display:block;"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </div>
+            <h3>Facebook 官方粉專</h3>
+            <p>沙龍最新公告、真甲健康養護深度文章、顧客評價心得與節慶特別活動發布。</p>
+            <a href="https://www.facebook.com/share/1LEF7n9bh6/" target="_blank" class="btn-social-action">
+              造訪 Facebook 粉專
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. 預約須知 & LINE QR Code 專區 -->
+    <section class="notice-section" id="notice">
+      <div class="content-container">
+        <div class="section-title-wrap">
+          <span class="section-en-title">Booking & LINE</span>
+          <h2 class="section-main-title">預約須知與 LINE 官方</h2>
+        </div>
+
+        <div class="notice-card">
+          <p><strong>【完全預約制・歡迎當日臨時碰運氣】</strong></p>
+          <ul>
+            <li>為維護每位顧客的施作品質與隱私，沙龍採全預約制。若當日臨時想施作，歡迎透過 LINE 或電話洽詢當日釋出空檔。</li>
+            <li>多語溝通服務：日本語対応可 / English Friendly / 國台語皆可。</li>
+            <li>預約時請告知：稱呼、預約日期時段、施作項目（手/足/保養/造型）、是否需要卸甲。</li>
+          </ul>
+        </div>
+
+        <div class="line-qr-card">
+          <div class="qr-image-wrapper">
+            <img 
+              src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=12&data=https%3A%2F%2Flin.ee%2FuQ07Rjz" 
+              alt="布麗昂美甲沙龍 LINE 官方預約 QR Code"
+              loading="lazy"
+            >
+          </div>
+          <div class="qr-title">
+            <span>LINE 官方預約諮詢</span>
+          </div>
+          <div class="qr-id-text">ID: @105qoxyb</div>
+          <p class="qr-tip">手機可直接點擊下方按鈕加入<br>平板與電腦請拿起手機相機掃描 QR Code</p>
+          
+          <a href="https://lin.ee/uQ07Rjz" target="_blank" class="qr-direct-link-btn">
+            開啟 LINE 立即諮詢
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. 門市位置資訊 Access -->
+    <section class="access-section" id="access">
+      <div class="content-container">
+        <div class="section-title-wrap">
+          <span class="section-en-title">Salon Access</span>
+          <h2 class="section-main-title">門市資訊與交通</h2>
+        </div>
+
+        <ul class="access-info-list">
+          <li class="access-info-item">
+            <span class="access-icon">📍</span>
+            <div>
+              <strong>地址</strong><br>
+              台北市大安區信義路四段 265 巷 23 號 1 樓<br>
+              <small style="color: var(--text-muted); font-size: 0.85rem;">（捷運信義安和站 5 號出口，步行約 2 分鐘）</small>
+            </div>
+          </li>
+          <li class="access-info-item">
+            <span class="access-icon">🕒</span>
+            <div>
+              <strong>營業時間</strong><br>
+              週一至週三、週五：10:00 – 19:00<br>
+              週六至週日：10:00 – 17:00<br>
+              <span style="color: var(--champagne-gold); font-weight: 500;">週四為固定公休日</span>
+            </div>
+          </li>
+          <li class="access-info-item">
+            <span class="access-icon">📞</span>
+            <div>
+              <strong>預約專線</strong><br>
+              <a href="tel:0936263723" style="text-decoration: underline;">0936-263-723</a>
+            </div>
+          </li>
+          <li class="access-info-item">
+            <span class="access-icon">💬</span>
+            <div>
+              <strong>LINE 官方帳號</strong><br>
+              ID：@105qoxyb
+            </div>
+          </li>
+        </ul>
+
+        <div style="text-align: center; margin-top: 1.5rem;">
+          <a href="https://maps.google.com/?q=台北市大安區信義路4段265巷23號一樓" target="_blank" class="btn btn-outline" style="width: 100%; max-width: 400px;">
+            開啟 Google Maps 地圖導航
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 9. 頁尾 Footer -->
+  <footer class="site-footer">
+    <div class="footer-social-links">
+      <a href="https://www.instagram.com/brillant_nail_salon/" target="_blank">
+        <svg width="14" height="14" viewBox="0 0 24 24" style="width:14px!important;height:14px!important;max-width:14px!important;display:block;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Instagram
+      </a>
+      <a href="https://www.facebook.com/share/1LEF7n9bh6/" target="_blank">
+        <svg width="14" height="14" viewBox="0 0 24 24" style="width:14px!important;height:14px!important;max-width:14px!important;display:block;"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Facebook
+      </a>
+      <a href="https://lin.ee/uQ07Rjz" target="_blank">LINE</a>
+      <a href="https://gofind.com.tw/beauty/taipei-brillant-nail-salon-%E5%B8%83%E9%BA%97%E6%98%82%E7%BE%8E%E7%94%B2%E6%B2%99%E9%BE%8D-%E5%A4%A7%E5%AE%89%E5%8D%80%E7%BE%8E%E7%94%B2%E6%8E%A8%E8%96%A6-%E3%83%8D%E3%82%A4%E3%83%AB%E3%82%B5%E3%83%AD%E3%83%B3" target="_blank">GoFind 報導</a>
+    </div>
+
+    <!-- 頁尾多語直連 -->
+    <div class="footer-lang-list">
+      <a href="index.html">繁體中文</a>
+      <a href="index-ja.html">日本語</a>
+      <a href="index-en.html">English</a>
+    </div>
+
+    <p>© BRILLANT NAIL SALON 布麗昂美甲沙龍 All Rights Reserved.</p>
+  </footer>
+
+  <!-- 10. 手機版底部常駐預約條 -->
+  <aside class="mobile-sticky-bar" aria-label="行動預約快捷列">
+    <a href="tel:0936263723" class="sticky-btn-call">
+      撥打電話
+    </a>
+    <a href="https://lin.ee/uQ07Rjz" target="_blank" class="sticky-btn-line">
+      LINE 立即預約
+    </a>
+  </aside>
+
+  <!-- 漢堡選單 JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggleBtn = document.getElementById('menuToggleBtn');
+      const navDrawer = document.getElementById('navDrawer');
+      const navItems = document.querySelectorAll('.nav-item');
+
+      function toggleMenu() {
+        const isOpen = navDrawer.classList.toggle('is-open');
+        menuToggleBtn.classList.toggle('is-active', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      }
+
+      function closeMenu() {
+        navDrawer.classList.remove('is-open');
+        menuToggleBtn.classList.remove('is-active');
+        document.body.style.overflow = '';
+      }
+
+      menuToggleBtn.addEventListener('click', toggleMenu);
+
+      navItems.forEach(item => {
+        item.addEventListener('click', closeMenu);
+      });
+    });
+  </script>
+</body>
+</html>
